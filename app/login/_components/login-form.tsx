@@ -6,8 +6,8 @@ import RegisterModal from './register-modal';
 
 export default function LoginForm() {
   const router = useRouter();
-  const [username, setUsername] = useState('abujanda');
-  const [password, setPassword] = useState('abujanda');
+  const [username, setUsername] = useState('username');
+  const [password, setPassword] = useState('*******');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [registerOpen, setRegisterOpen] = useState(false);
