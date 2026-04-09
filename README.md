@@ -110,3 +110,13 @@ Remove-Item .\middleware.ts
 ```
 
 Atau paling aman, ganti seluruh folder project dengan isi ZIP terbaru ini, jangan ditimpa setengah-setengah.
+
+
+## Netlify quick fix
+
+This package is prepared for Netlify:
+- `.node-version` pins Node 20
+- `.npmrc` points npm to the public npm registry
+- `netlify.toml` sets the build command and Node version
+
+If you previously pushed a `package-lock.json` generated from a private/internal registry, remove it from your repo before redeploying.

@@ -60,7 +60,7 @@ export default function RegisterModal({ open, onClose }: RegisterModalProps) {
         <div className="modal-head">
           <div>
             <h2 id="register-title">Register</h2>
-
+            <p>Simpan akun baru langsung ke database.</p>
           </div>
           <button className="modal-close" type="button" onClick={onClose} aria-label="Tutup register">×</button>
         </div>

@@ -462,7 +462,7 @@ export default function DashboardClient({ dbStatusMessage }: { dbStatusMessage: 
       <div className="dashboard-shell minimal-shell">
         <header className="dashboard-header">
           <div className="dashboard-brand">
-            <small>Abu Janda & Binor Hunter</small>
+            <small>Abu Janda App</small>
             <h1>Dashboard</h1>
           </div>
 
@@ -487,7 +487,7 @@ export default function DashboardClient({ dbStatusMessage }: { dbStatusMessage: 
             <div className="directory-header">
               <div>
                 <h2>Data Janda &amp; Binor</h2>
-                <p>Direktori Janda & Binor seluruh indonesia yang bisa di pakai iclik kalao kamu beruntung.</p>
+                <p>Direktori kontak hasil input anggota. Data yang sudah disimpan bersifat final dan tidak bisa diedit lagi.</p>
               </div>
 
               <div className="directory-actions">
@@ -505,7 +505,7 @@ export default function DashboardClient({ dbStatusMessage }: { dbStatusMessage: 
                 </div>
 
                 <button className="ghost-button" type="button" onClick={openModal}>
-                  Tambah Janda/Binor
+                  Input Janda / Binor
                 </button>
               </div>
             </div>
@@ -519,7 +519,7 @@ export default function DashboardClient({ dbStatusMessage }: { dbStatusMessage: 
             {filteredContacts.length === 0 ? (
               <div className="directory-empty">
                 {contacts.length === 0
-                  ? ''
+                  ? 'Belum ada data masuk. Tambahkan data baru lewat tombol input di atas.'
                   : 'Data tidak ditemukan. Coba kata kunci lain.'}
               </div>
             ) : (
@@ -552,6 +552,8 @@ export default function DashboardClient({ dbStatusMessage }: { dbStatusMessage: 
             <div className="tips-header">
               <h2>Rayuan Maut</h2>
               <p>
+                Halaman ini difokuskan untuk tips komunikasi romantis yang sopan, natural, dan berbasis persetujuan.
+                Isi di bawah dibuat untuk perkenalan sampai ajakan kencan yang tetap menghargai batasan.
               </p>
             </div>
 
@@ -576,7 +578,7 @@ export default function DashboardClient({ dbStatusMessage }: { dbStatusMessage: 
         ) : activeMenu === 'Mantra Pemikat' ? (
           <FolkloreList
             title="Mantra Pemikat"
-            subtitle=""
+            subtitle="Daftar pengasihan dalam bingkai edukasi kebatinan tanah Jawa. Disusun ringan, rapi, dan mudah dibaca per keilmuan."
             entries={pemikatEntries}
             dbStatusMessage={dbStatusMessage}
           />
@@ -592,7 +594,7 @@ export default function DashboardClient({ dbStatusMessage }: { dbStatusMessage: 
             <p className="dashboard-lead">
               Menu <strong>{activeMenu}</strong> sedang disiapkan. Navigasi atas tetap aktif dan ringan untuk desktop maupun mobile.
             </p>
-
+            <p className="dashboard-meta">Status database: {dbStatusMessage}</p>
           </section>
         )}
       </div>
