@@ -1,0 +1,1 @@
+Hapus file middleware.ts lama jika masih ada. Next.js hanya boleh memakai proxy.ts.

@@ -1,0 +1,10 @@
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { AUTH_COOKIE_NAME } from '@/lib/auth';
+
+export default async function HomePage() {
+  const cookieStore = await cookies();
+  const isLoggedIn = cookieStore.get(AUTH_COOKIE_NAME)?.value === 'logged-in';
+
+  redirect(isLoggedIn ? '/dashboard' : '/login');
+}
